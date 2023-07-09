@@ -65,17 +65,17 @@ async def check_model(request) -> Optional[JSONResponse]:
 async def get_gen_prompt(request) -> str:
     if "mpt" in request.model:
         conv = Conversation(
-            name="mpt",
-            system="""<|im_start|>system
+            name="mpt",
+            system="""<|im_start|>system
 A conversation between a user and an intelligent AI assistant. The assistant is good at playing different roles to chat to the user.
 """,
-            roles=("<|im_start|>user", "<|im_start|>assistant"),
-            messages=(),
-            offset=0,
-            sep_style=SeparatorStyle.ADD_NEW_LINE_SINGLE,
-            sep="<|im_end|>",
-            stop_token_ids=[50278, 0],
-        )
+            roles=("<|im_start|>user", "<|im_start|>assistant"),
+            messages=(),
+            offset=0,
+            sep_style=SeparatorStyle.ADD_NEW_LINE_SINGLE,
+            sep="<|im_end|>",
+            stop_token_ids=[50278, 0],
+        )
     else:
         conv = get_conversation_template(request.model)
         conv = Conversation(
