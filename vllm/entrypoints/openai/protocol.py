@@ -59,7 +59,7 @@ class ChatCompletionRequest(BaseModel):
     top_p: Optional[float] = 1.0
     n: Optional[int] = 1
     max_tokens: Optional[int] = 16
-    stop: Optional[Union[str, List[str]]] = Field(default_factory=list)
+    stop: Optional[Union[str, List[str]]] = ["<|im_end|>", "<|endoftext|>"]
     stream: Optional[bool] = False
     presence_penalty: Optional[float] = 0.0
     frequency_penalty: Optional[float] = 0.0

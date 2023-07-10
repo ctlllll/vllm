@@ -72,7 +72,7 @@ A conversation between a user and an intelligent AI assistant. The assistant is 
         roles=("<|im_start|>user", "<|im_start|>assistant"),
         messages=[],
         offset=0,
-        sep_style=SeparatorStyle.ADD_NEW_LINE_SINGLE,
+        sep_style=SeparatorStyle.CHATML,
         sep="<|im_end|>",
         stop_token_ids=[50278, 0],
     )
