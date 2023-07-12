@@ -108,7 +108,7 @@ async def check_length(request, prompt, model_config):
     elif hasattr(model_config.hf_config, "seq_length"):
         context_len = model_config.hf_config.seq_length
     else:
-        context_len = 2048
+        context_len = 8192
 
     input_ids = tokenizer(prompt).input_ids
     token_num = len(input_ids)
