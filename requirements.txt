@@ -5,7 +5,7 @@ sentencepiece  # Required for LLaMA tokenizer.
 numpy
 torch >= 2.0.0
 transformers >= 4.28.0  # Required for LLaMA.
-xformers >= 0.0.19
+xformers@git+https://github.com/facebookresearch/xformers@278460b
 fastapi
 uvicorn
 pydantic  # Required for OpenAI server.
